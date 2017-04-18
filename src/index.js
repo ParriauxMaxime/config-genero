@@ -26,13 +26,13 @@ render(
         <Router history={history} >
             <div>
                 <App>
-                <Route path="/overview" component={Overview}/>
-                <Route path="/header" component={Header}/>
-                <Route path="/footer" component={Layout}/>
-                <Route path="/fonts" component={Layout}/>
-                <Route path="/images" component={Layout}/>
-                <Route path="/icons" component={Layout}/>
-                <Route path="/locales" component={Layout}/>
+                    <Route path="/overview" component={Overview}/>
+                    <Route path="/header" component={Header}/>
+                    <Route path="/footer" component={Layout}/>
+                    <Route path="/fonts" component={Layout}/>
+                    <Route path="/images" component={Layout}/>
+                    <Route path="/icons" component={Layout}/>
+                    <Route path="/locales" component={Layout}/>
                 </App>
             </div>
         </Router>
