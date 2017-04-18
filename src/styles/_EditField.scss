@@ -1,0 +1,22 @@
+.App {
+  .edit-field--container {
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 50px;
+    .mdl-textfield__input {
+      text-align: right!important;
+    }
+    label {
+      white-space: nowrap;
+      text-align: right;
+      width: auto;
+    }
+    .edit-field--text-field {
+      text-align: right;
+      width: 100%;
+      margin: 0px 0px 0px 10px;
+    }
+  }
+}

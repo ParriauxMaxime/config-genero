@@ -6,17 +6,24 @@
   "scripts": {
     "build": "nwb build-react-app",
     "clean": "nwb clean-app",
-    "start": "nwb serve-react-app",
+    "start": "nwb serve-react-app --plugin sass",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
+    "prop-types": "^15.5.6",
     "react": "^15.5.3",
-    "react-dom": "^15.5.3"
+    "react-dom": "^15.5.3",
+    "react-mdl": "^1.9.0",
+    "react-redux": "^5.0.4",
+    "react-router": "^4.0.0",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
-    "nwb": "0.15.x"
+    "nwb": "0.15.x",
+    "nwb-sass": "^0.7.1",
+    "react-router-dom": "^4.0.0"
   },
   "author": "",
   "license": "MIT",

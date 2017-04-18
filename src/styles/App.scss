@@ -1,0 +1,19 @@
+@import "Layout";
+@import "EditField";
+
+.App {
+  height: 100%;
+  min-height: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  .link--root {
+    color: darkgrey;
+    text-decoration: none;
+  }
+  .link--root:hover {
+    text-decoration: underline;
+    color: white;
+  }
+}
