@@ -1,15 +1,12 @@
 /**
  * Created by maxime on 11/04/17.
  */
-import PropTypes from 'prop-types';
-import React from 'react';
-import Types from '../models/Types';
-import Optional from './Optional';
-import EditField from './EditField';
+import PropTypes from "prop-types";
+import React from "react";
+import EditField from "./EditField";
 
 const InnerLayout = ({model, onChange}) => {
     return (
-        <div className="layout">
             <div className="layout--config layout--padding">
                 <div className="layout--fields">
                     {
@@ -27,7 +24,6 @@ const InnerLayout = ({model, onChange}) => {
                     <br/>
                 </div>
             </div>
-        </div>
     );
 };
 

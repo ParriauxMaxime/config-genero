@@ -1,14 +1,15 @@
-import './styles/App.scss'
+import "./styles/App.scss";
 
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
-import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
+import {Content, Drawer, Header, Layout as LayoutMDL, Navigation} from "react-mdl";
+import Layout from "./components/Layout";
 
 class App extends Component {
   render() {
     return (
         <div className="App">
-            <Layout fixedHeader>
+            <LayoutMDL fixedHeader>
                 <Header title={<span><span style={{ color: '#ddd' }}>
                     <Link to="/" className="link--root">Genero</Link> /
                 </span><strong> Front-end configurator</strong></span>}/>
@@ -24,9 +25,11 @@ class App extends Component {
                     </Navigation>
                 </Drawer>
                 <Content>
-                    {this.props.children}
+                    <Layout>
+                        {this.props.children}
+                    </Layout>
                 </Content>
-            </Layout>
+            </LayoutMDL>
         </div>
     );
   }

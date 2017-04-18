@@ -22,7 +22,7 @@
             h2 {
               line-height: 0;
               text-align: left;
-              margin: 0px 20px;
+              margin: 0 20px;
               font-size: 2em;
             }
             hr {
@@ -49,40 +49,9 @@
         .field-optional {
           overflow-x: hidden;
           text-align: left;
-          background-color: #EEE;
           min-height: 2em;
           overflow-y: hidden;
         }
-        .layout--ratio {
-
-        }
-        .layout--size {
-
-        }
-        layout--color {
-
-        }
-        layout--duration {
-
-        }
-      }
-    }
-    .layout--preview {
-      width: 800px;
-      height: 100vh;
-      display: flex;
-      flex-grow: 1;
-      flex-wrap: wrap;
-      .black--cube {
-        position: fixed;
-        background-color: lightblue;
-        color: white;
-        height: 500px;
-        width: 800px;
-        left: 50%;
-        top: 50%;
-        border-radius: 10px;
-        margin-top: -250px;
       }
     }
   }

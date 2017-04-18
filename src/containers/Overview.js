@@ -1,6 +1,6 @@
-import { connect } from 'react-redux'
-import Layout from '../components/Layout';
-import { changeOverview } from '../actions/Overview';
+import {connect} from "react-redux";
+import OrganizedLayout from "../components/OrganizedLayout";
+import {changeOverview} from "../actions/Overview";
 
 const mapStateToProps = (state) => {
     return {
@@ -20,6 +20,6 @@ const mapDispatchToProps = (dispatch) => {
 const Overview = connect(
     mapStateToProps,
     mapDispatchToProps
-)(Layout);
+)(OrganizedLayout);
 
 export default Overview;

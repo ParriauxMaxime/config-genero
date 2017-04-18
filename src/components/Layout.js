@@ -1,105 +1,65 @@
 /**
  * Created by maxime on 11/04/17.
  */
-import PropTypes from 'prop-types';
-import React from 'react';
-import Types from '../models/Types';
-import Control from './Control';
-import Field from './Field';
+import PropTypes from "prop-types";
+import React from "react";
+import SplitPane from "react-split-pane";
 
-Array.prototype.clean = function(deleteValue = undefined) {
-    for (var i = 0; i < this.length; i++) {
-        if (this[i] === deleteValue) {
-            this.splice(i, 1);
-            i--;
-        }
-    }
-    return this;
-};
+const Layout = ({children}) => {
+    const CenterSeparator = {
+        borderLeft: '3px solid #595ACC',
+        cursor: 'ew-resize'
+    };
 
-const selectType = (model, type) => {
-    const fields = Object.keys(model).map((e) => e);
-    const tmp = fields.map((elem, i) => {
-        if (model[elem].type.pattern === type.pattern)
-            return (elem);
-    });
-    return tmp.clean();
-};
+    const configSystem = {
+        backgroundColor: '#EEE',
+        minWidth: 400,
+    };
 
-const ratio = (props) => selectType(props, Types.ratio);
-const size = (props) => selectType(props, Types.size);
-const color = (props) => selectType(props, Types.color);
-const duration = (props) => selectType(props, Types.duration);
-const boolean = (props) => selectType(props, Types.boolean);
+    const preview = {
+        minWidth: 400,
+        width: '100%',
+        backgroundColor: 'black',
+        height: '100vh',
+        display: 'flex',
+        flexGrow: '1',
+        flexWrap: 'wrap',
+    };
+
+    let innerPreview = {
+        position: 'relative',
+        backgroundColor: 'lightblue',
+        color: 'white',
+        width: '90%',
+        height: '50vh',
+        margin: 'auto'
 
 
+    };
 
-
-const Layout = ({model, onChange}) => {
-    const fields = [
-        {
-            data: ratio(model),
-            toolTip: "Ratio is just a number, without unit",
-            title: 'Ratio'
-        },
-        {
-            data: size(model),
-            toolTip: "Size could accept different units, like px, pc, cm, em, rem, vh, vw",
-            title: 'Size'
-        },
-        {
-            data: color(model),
-            toolTip: "Color could accept different units, like rgb, rgba, hsl, hsla, #CCC",
-            title: 'Color'
-        },
-        {
-            data: duration(model),
-            toolTip: "Duration is just a number of seconds",
-            title: 'Duration'
-        },
-        {
-            data: boolean(model),
-            toolTip: "True or false",
-            title: 'Activate'
-        }
-
-    ];
     return (
         <div className="layout">
-            <div className="layout--config layout--padding">
-                <div className="layout--fields">
-                    {
-                        fields.map((e, i) => (
-                          <Field model={model}
-                                 data={e.data}
-                                 toolTip={e.toolTip}
-                                 title={e.title}
-                                 onChange={onChange}
-                                 key={i}/>
-                        ))
-                    }
+            <SplitPane split="vertical"
+                       minSize={400}
+                       maxSize={1200}
+                       defaultSize={800}
+                       resizerStyle={CenterSeparator}
+                       pane1Style={configSystem}>
+                <div style={configSystem}>
+                    {children}
                 </div>
-            </div>
-            <div className="layout--preview">
-                <div className="black--cube">
-                    preview
+                <div style={preview} id="preview-block">
+                    <div style={innerPreview}>
+                        preview
+                    </div>
                 </div>
-            </div>
+            </SplitPane>
         </div>
         );
 };
-//                <Control/>
-
-/*<div className="layout--preview">
-    <div className="black--cube">
-        preview
-    </div>
-</div>
-*/
 
 Layout.propTypes = {
-    model: PropTypes.object.isRequired,
-    onChange: PropTypes.func.isRequired
+    children: PropTypes.node.isRequired,
 };
 
 export default Layout;
