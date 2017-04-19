@@ -7,13 +7,14 @@ import SplitPane from "react-split-pane";
 
 const Layout = ({children}) => {
     const CenterSeparator = {
-        borderLeft: '3px solid #595ACC',
+        borderLeft: '6px solid #595ACC',
         cursor: 'ew-resize'
     };
 
     const configSystem = {
         backgroundColor: '#EEE',
         minWidth: 400,
+        overflowY: 'auto'
     };
 
     const preview = {
@@ -42,7 +43,7 @@ const Layout = ({children}) => {
             <SplitPane split="vertical"
                        minSize={400}
                        maxSize={1200}
-                       defaultSize={800}
+                       defaultSize={880}
                        resizerStyle={CenterSeparator}
                        pane1Style={configSystem}>
                 <div style={configSystem}>

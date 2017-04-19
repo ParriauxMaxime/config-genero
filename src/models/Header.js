@@ -2,7 +2,7 @@
  * Created by maxime on 12/04/17.
  */
 
-import Types from './Types';
+import Types from "./Types";
 
 export const Header = {
     'gbc-header': {
@@ -13,12 +13,12 @@ export const Header = {
             'gbc-header-height': {
                 'type': Types.size,
                 'default': '0px',
-                'value': undefined
+                'value': ''
             },
             'gbc-header-background-color': {
                 'type': Types.color,
                 'default': 'white',
-                'value': undefined
+                'value': ''
             },
             'gbc-header-logo': {
                 'type': Types.optional,
@@ -28,17 +28,17 @@ export const Header = {
                     'gbc-header-logo-file': {
                         'type': Types.img,
                         'default': 'none',
-                        'value': undefined
+                        'value': ''
                     },
                     'gbc-header-logo-position': {
                         'type': Types.position,
                         'default': 'left',
-                        'value': undefined
+                        'value': ''
                     },
                     'gbc-header-logo-size': {
                         'type': Types.size,
                         'default': '0px',
-                        'value': undefined
+                        'value': ''
                     }
                 }
             },
@@ -55,17 +55,17 @@ export const Header = {
                     'gbc-header-text-position--primary': {
                         'type': Types.position,
                         'default': 'left',
-                        'value': undefined
+                        'value': ''
                     },
                     'gbc-header-font-color--primary': {
                         'type': Types.color,
                         'default': 'black',
-                        'value': undefined
+                        'value': ''
                     },
                     'gbc-header-text-decoration--primary': {
                         'type': Types.textDecoration,
                         'default': 'none',
-                        'value': undefined
+                        'value': ''
                     },
                     'gbc-header-text-hyperlink--primary': {
                         'type': Types.optional,
@@ -75,7 +75,7 @@ export const Header = {
                             'gbc-header-text-hyperlink-url--primary': {
                                 'type': Types.string,
                                 'default': '',
-                                'value': undefined
+                                'value': ''
                             }
                         }
                     }
@@ -94,17 +94,17 @@ export const Header = {
                     'gbc-header-text-position--secondary': {
                         'type': Types.position,
                         'default': 'left',
-                        'value': undefined
+                        'value': ''
                     },
                     'gbc-header-font-color--secondary': {
                         'type': Types.color,
                         'default': 'black',
-                        'value': undefined
+                        'value': ''
                     },
                     'gbc-header-text-decoration--secondary': {
                         'type': Types.textDecoration,
                         'default': 'none',
-                        'value': undefined
+                        'value': ''
                     },
                     'gbc-header-text-hyperlink--secondary': {
                         'type': Types.optional,
@@ -114,7 +114,7 @@ export const Header = {
                             'gbc-header-text-hyperlink-url--secondary': {
                                 'type': Types.string,
                                 'default': '',
-                                'value': undefined
+                                'value': ''
                             }
                         }
                     }

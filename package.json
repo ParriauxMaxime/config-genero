@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Describe genero-config here",
   "private": true,
+  "engines": {
+    "node": ">= 4.2.1"
+  },
   "scripts": {
     "build": "nwb build-react-app",
     "clean": "nwb clean-app",
@@ -12,18 +15,34 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
     "prop-types": "^15.5.6",
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
     "react-mdl": "^1.9.0",
     "react-redux": "^5.0.4",
     "react-router": "^4.0.0",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-compress": "^1.4.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-gitinfo": "^0.1.8",
+    "grunt-injector": "^1.1.0",
+    "grunt-node-version": "^1.0.2",
+    "grunt-sass": "^2.0.0",
+    "grunt-templates2js": "0.0.2",
+    "grunt-text-replace": "^0.4.0",
     "nwb": "0.15.x",
     "nwb-sass": "^0.7.1",
-    "react-router-dom": "^4.0.0"
+    "react-router-dom": "^4.0.0",
+    "react-split-pane": "^0.1.63",
+    "time-grunt": "^1.4.0"
   },
   "author": "",
   "license": "MIT",
