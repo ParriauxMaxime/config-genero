@@ -1,0 +1,51 @@
+.gbc_MonitorDebugLayoutInfoWidget {
+  margin-top: 20px;
+
+  td {
+    padding: 2px;
+  }
+
+  h5 {
+    background: $gbc-primary-medium-color;
+    color: $gbc-secondary-text-color;
+    padding: 0 8px;
+  }
+
+  > div {
+    vertical-align: top;
+
+    display: inline-block;
+    table {
+      width: 240px;
+      tr:nth-child(odd) {
+        background: $gbc-primary-background-color;
+      }
+      .auititle {
+        text-transform: uppercase;
+        background: $gbc-primary-medium-color !important;
+        color: $gbc-secondary-text-color;
+      }
+
+    }
+    &.aui {
+      table {
+        width: 100px;
+      }
+    }
+    &.deltas {
+      table {
+        width: 70px;
+      }
+    }
+    &.stretch {
+      table {
+        width: 70px;
+      }
+    }
+    &.fromController {
+      table {
+        width: 200px;
+      }
+    }
+  }
+}

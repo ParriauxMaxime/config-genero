@@ -1,0 +1,10 @@
+.gbc_TraditionalScreenWidget {
+  width: 100%;
+  height: 100%;
+  background-color: $gbc-primary-background-color;
+  @include mt-card-border($gbc-margin-ratio, $gbc-font-size-ratio);
+  letter-spacing: $traditional-mode-letter-spacing;
+  .mt-field {
+    padding: 0;
+  }
+}

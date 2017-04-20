@@ -1,0 +1,12 @@
+.gbc_LabelWidget {
+  display: inline-block;
+  white-space: nowrap;
+  padding: $gbc-margin-ratio*6px;
+  .g_measured &.g_measureable{
+    width: 100%;
+  }
+}
+[__LabelWidget].gbc-label-text-container{
+    flex: 1 1 auto;
+  white-space: pre;
+}

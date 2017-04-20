@@ -1,0 +1,38 @@
+.gbc_TextEditWidget, .gbc_DummyTextEditWidget{
+  line-height: inherit;
+  padding: $gbc-margin-ratio*6px $gbc-margin-ratio*4px $gbc-margin-ratio*6px $gbc-margin-ratio*6px;
+
+  .gbc_dataContentMeasure{
+    line-height: (1/$gbc-font-size-ratio)*1em;
+  }
+
+
+  cursor:default;
+  .g_measuring &.g_measureable{
+    width:auto!important;
+    height:auto!important;
+  }
+  .g_measured &.g_measureable, .g_measured &.g_measureable>textarea{
+      height: 100%;
+      width:100%;
+  }
+
+  >.textEditHtml{
+    cursor:text;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    line-height:normal;
+    >ul{
+      margin-left: $gbc-margin-ratio*35px;
+    }
+  }
+
+  &:not(.disabled) {
+    textarea {
+      cursor: text;
+    }
+  }
+}

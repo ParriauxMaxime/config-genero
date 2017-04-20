@@ -1,0 +1,15 @@
+.gbc_PageWidget{
+  z-index: 1;
+  background-color: $gbc-secondary-background-color;
+  visibility: hidden;
+  &.currentPage {
+    visibility: visible;
+    z-index: 2 !important;
+  }
+  .g_measuring &.g_measureable {
+    width:auto !important;
+    height:auto !important;
+    overflow: visible;
+    display: inline-flex !important;
+  }
+}

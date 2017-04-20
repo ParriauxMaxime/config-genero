@@ -1,0 +1,85 @@
+.gbc_ModalWidget {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  overflow: auto;
+  z-index: 55;
+
+  &.centered {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .mt-dialog-pane {
+    overflow: auto;
+/*    align-self: center;*/
+  }
+
+  .mt-dialog-header {
+    flex: 0 0 auto;
+    padding: $gbc-field-height-ratio*8px 0 $gbc-field-height-ratio*16px $gbc-field-height-ratio*8px;
+    > .gbc_ImageWidget {
+      flex: 0 0 auto;
+      width: auto;
+    }
+    .mt-dialog-title {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .mt-dialog-actions{
+      margin-left: 1.2em;
+      font-size: 1.2em;
+      &:hover{
+        color: $gbc-primary-color;
+      }
+    }
+  }
+  .mt-dialog-content {
+    flex: 1 1 auto;
+  }
+  .mt-dialog-footer {
+    flex: 0 0 auto;
+  }
+  .gbc_WindowWidget {
+    max-width: 100%;
+    max-height: 100%;
+    background-color: transparent;
+    box-shadow: none;
+
+    .gbc_WindowToolbarContainer {
+      border: none;
+    }
+  }
+
+  &.movable .mt-dialog-header{
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+  }
+  &.movable.moving {
+
+    .mt-dialog-header {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+      opacity: 1;
+    }
+    .mt-dialog-pane {
+      border: 1px dotted $gbc-primary-color;
+      opacity: 0.6;
+    }
+  }
+
+  &.noselect{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+  }
+}

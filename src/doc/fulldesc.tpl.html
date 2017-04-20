@@ -1,0 +1,45 @@
+<!--
+ FOURJS_START_COPYRIGHT(D,2014)
+ Property of Four Js*
+ (c) Copyright Four Js 2014, 2017. All Rights Reserved.
+ * Trademark of Four Js Development Tools Europe Ltd
+   in the United States and elsewhere
+ 
+ This file can be modified by licensees according to the
+ product manual.
+ FOURJS_END_COPYRIGHT
+-->
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h1 class="panel-title"><i class="label {{menuitem_kind_labelclass .}}" title="{{menuitem_kind_labeltitle .}}">{{menuitem_kind_label .}}</i>
+        <span class="name {{#if undocumented}}undocumented{{/if}}">{{name}}</span>
+    </h1>
+  </div>
+  <div class="panel-body">
+    <h2>Description</h2>
+{{#if description}}
+    <div class="itemdesc">{{safe description}}</div>
+{{else}}
+    <div class="error nodesc">No description available</div>
+{{/if}}
+{{#if parameters.length}}
+    <h2>Parameters</h2>
+    {{#each parameters}}
+        <div class="param"><div class="itemparam">{{name}}</div> <div class="itemparamtype">({{type}})</div>
+            <div class="paramdesc">{{safe description}}</div></div>
+    {{/each}}
+{{/if}}
+{{#if returns}}
+    <h2>Returns</h2>
+    <div class="returns"><div class="returntype">{{returns.type}}</div><div class="returndesc">{{safe returns.description}}</div></div>
+{{/if}}
+{{#if examples.length}}
+    <h2>Examples</h2>
+    {{#each examples}}
+        <pre><code>{{safe .}}</code></pre>
+    {{/each}}
+{{/if}}
+<h2>Debug</h2>
+<pre class="jsonCode">{{json .}}</pre>
+</div>
+</div>

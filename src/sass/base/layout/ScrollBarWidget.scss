@@ -1,0 +1,45 @@
+.gbc_ScrollBarWidget{
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 0 auto;
+  height: 100%;
+  //background-color:rgba(255, 255, 255, 0.5);
+
+  .track{
+    height: 100%;
+    width: 4px;
+    background: rgba(219, 219, 219, 0.6);
+  }
+
+  .thumb{
+    background: rgba(186,186,186,1);
+    width: 70%;
+    position: absolute;
+    top:1px;
+    transition: top 0.2s ease-out;
+    border-radius: 5px;
+
+
+    //cursor: move; /* fallback if grab cursor is unsupported */
+   /* cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;*/
+
+  }
+
+  &.moving .thumb{
+
+    cursor: default;
+    opacity: 1;
+
+  }
+
+  &.thinScrollbar-vanished{
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+
+    .thumb{
+      opacity: 0;
+    }
+  }
+}

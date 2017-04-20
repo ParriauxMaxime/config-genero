@@ -1,0 +1,49 @@
+.gbc_TimeEditWidget, .gbc_DummyTimeEditWidget  {
+  display: flex;
+  cursor:default;
+  > div:first-child {
+    flex: 1 1 auto;
+    > input {
+      font-family: inherit;
+      width:100%;
+    }
+  }
+
+  > .gbc_TimeEditWidget_arrows {
+    display: inline-flex;
+    flex-direction: column;
+    user-select: none;
+    padding-left: 4px;
+    font-family: 'Droid Sans';
+    > div {
+      font-size: 0.6em;
+      transition: background-color 0.5s;
+      color: $gbc-primary-text-color;
+      line-height:1em;
+
+      > span {
+        display: inline;
+      }
+    }
+  }
+
+  .gbc_TimeEditWidget_arrows > div {
+    cursor: pointer;
+    &:hover {
+      background-color: $gbc-primary-light-color;
+    }
+  }
+
+  &.readonly, &.disabled{
+    > .gbc_TimeEditWidget_arrows > div {
+      cursor: inherit;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  input{
+    cursor:text;
+  }
+}

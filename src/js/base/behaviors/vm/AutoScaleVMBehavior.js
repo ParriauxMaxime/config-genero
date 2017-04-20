@@ -1,0 +1,51 @@
+/// FOURJS_START_COPYRIGHT(D,2014)
+/// Property of Four Js*
+/// (c) Copyright Four Js 2014, 2017. All Rights Reserved.
+/// * Trademark of Four Js Development Tools Europe Ltd
+///   in the United States and elsewhere
+/// 
+/// This file can be modified by licensees according to the
+/// product manual.
+/// FOURJS_END_COPYRIGHT
+
+"use strict";
+
+modulum('AutoScaleVMBehavior', ['BehaviorBase'],
+  /**
+   * @param {gbc} context
+   * @param {classes} cls
+   */
+  function(context, cls) {
+    /**
+     * @class classes.AutoScaleVMBehavior
+     * @extends classes.BehaviorBase
+     */
+    cls.AutoScaleVMBehavior = context.oo.Singleton(cls.BehaviorBase, function($super) {
+      /** @lends classes.AutoScaleVMBehavior.prototype */
+      return {
+        __name: "AutoScaleVMBehavior",
+
+        watchedAttributes: {
+          decorator: ['autoScale', 'sizePolicy', 'stretch']
+        },
+
+        /**
+         *
+         */
+        _apply: function(controller, data) {
+          var widget = controller.getWidget();
+          if (widget && widget.setAutoScale) {
+            var bindings = controller.getNodeBindings();
+            var node = bindings.decorator ? bindings.decorator : bindings.anchor;
+            var autoScale = node.attribute('autoScale');
+            var sizePolicy = node.attribute('sizePolicy');
+            var hasStretch = node.isAttributesSetByVM('stretch');
+            if (widget.setStretch) {
+              widget.setStretch(hasStretch);
+            }
+            widget.setAutoScale(((sizePolicy === 'fixed' || hasStretch) && !!autoScale) || (sizePolicy === 'initial' && !!autoScale));
+          }
+        }
+      };
+    });
+  });

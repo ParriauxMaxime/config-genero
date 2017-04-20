@@ -1,0 +1,35 @@
+.gbc_SessionSidebarWindowItemWidget {
+    display: flex;
+    flex-direction: row;
+    line-height: $gbc-margin-ratio*48px;
+    > a {
+      flex: 1 1 auto;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  &.activeWindow .applicationName {
+    font-weight: bold;
+  }
+  &.visibleWindow .windowName{
+    font-weight: bold;
+  }
+
+  .windowIcon {
+    display: flex;
+    align-items: center;
+
+    .gbc_ImageWidget {
+      fill: $gbc-primary-color;
+      margin-right: $gbc-margin-ratio*4px;
+    }
+  }
+
+  &:not(.activeWindow) > span.close, &:not(.closableWindow) > span.close{
+    @include vanished();
+  }
+}
+
+span.close{
+  cursor:pointer;
+}

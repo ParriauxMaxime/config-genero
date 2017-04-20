@@ -1,0 +1,25 @@
+<!--
+ FOURJS_START_COPYRIGHT(D,2014)
+ Property of Four Js*
+ (c) Copyright Four Js 2014, 2017. All Rights Reserved.
+ * Trademark of Four Js Development Tools Europe Ltd
+   in the United States and elsewhere
+ 
+ This file can be modified by licensees according to the
+ product manual.
+ FOURJS_END_COPYRIGHT
+-->
+{{#notempty .}}
+  <div class="menu-block" id="menu-{{___id}}">
+    {{#hasChildren .}}
+      <span class="menu-toggle glyphicon glyphicon-chevron-right"></span>
+    {{else}}
+      <span class="glyphicon glyphicon-none"></span>
+    {{/hasChildren}}
+    <div class="menu-title {{menuitem_kind_class .}}">
+      <i class="label {{menuitem_kind_labelclass .}}" title="{{menuitem_kind_labeltitle .}}">{{menuitem_kind_label .}}</i>
+      <span class="name {{#if undocumented}}undocumented{{/if}}">{{name}}</span>
+    </div>
+  </div>
+{{/notempty}}
+  

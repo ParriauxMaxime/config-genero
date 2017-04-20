@@ -1,0 +1,42 @@
+.gbc_SessionSidebarApplicationItemWidget {
+  cursor: pointer;
+  > div {
+    display: flex;
+    flex-direction: row;
+    line-height: 32px;
+    > .applicationName{
+      flex: 1 1 auto;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  > ul {
+    padding-left: 14px;
+  }
+
+
+  .noAction{
+    pointer-events: none !important;
+  }
+
+  &.activeWindow .applicationName{
+    font-weight: bold;
+  }
+  .applicationIcon, .windowIcon {
+    display: flex;
+    align-items: center;
+
+    .gbc_ImageWidget {
+      margin-right: 4px;
+      @extend .icon;
+    }
+  }
+
+  &[processing] {
+    cursor: progress !important;
+    ul {
+      pointer-events: none;
+    }
+  }
+}

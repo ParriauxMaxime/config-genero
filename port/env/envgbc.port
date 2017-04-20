@@ -1,0 +1,15 @@
+# FOURJS_START_COPYRIGHT(P,2014)
+# Property of Four Js*
+# (c) Copyright Four Js 2014, 2015. All Rights Reserved.
+# * Trademark of Four Js Development Tools Europe Ltd
+#   in the United States and elsewhere
+# FOURJS_END_COPYRIGHT
+
+
+# Add nodjs/npm tools in path
+PATH=/usr/local/tools/32bits/nodejs/7.5.0/bin:$PATH
+export PATH
+
+# Proxy settings in order to access git repo (used by grunt)
+http_proxy=http://proxy.strasbourg.4js.com:3128
+export http_proxy

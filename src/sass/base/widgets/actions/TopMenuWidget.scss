@@ -1,0 +1,104 @@
+$gbc-TopMenu-hover-color: $gbc-primary-light-color;
+$gbc-TopMenu-vertical-padding: $gbc-margin-ratio * 6px;
+$gbc-TopMenu-horizontal-padding: $gbc-margin-ratio * 20px;
+$gbc-TopMenu-line-height: $gbc-font-size-ratio * 26px;
+
+.gbc_TopMenuWidget {
+  display: flex;
+  list-style: none;
+  user-select: none;
+
+  .gbc_TopMenuGroupWidget {
+    display: flex;
+    align-items: center;
+    padding: $gbc-TopMenu-vertical-padding $gbc-TopMenu-horizontal-padding;
+    line-height: $gbc-TopMenu-line-height;
+    user-select: none;
+
+    &:not(.disabled):hover, &:not(.disabled).touchHover  {
+      cursor: pointer;
+      background-color: $gbc-TopMenu-hover-color;
+    }
+
+    .gbc_ImageWidget {
+      display: flex;
+      align-items: center;
+      margin-right: 8px;
+      &.gbc_autoScale {
+        width: 16px !important;
+        height: 16px !important;
+      }
+    }
+  }
+}
+
+/* concerns element in DropDown */
+.gbc_DropDownContainerWidget{
+  .divider {
+    margin: 4px 12px;
+    border-top: 1px solid $gbc-separator-color;
+    min-height: 1px;
+    &:not(.disabled):hover{
+      cursor:default;
+      background-color: inherit;
+    }
+  }
+
+  .gbc_TopMenuGroupWidget, .gbc_TopMenuCommandWidget {
+    display: flex;
+    align-items: center;
+    padding: $gbc-TopMenu-vertical-padding $gbc-TopMenu-horizontal-padding;
+    line-height: $gbc-TopMenu-line-height;
+
+    .gbc_ImageWidget{
+      display: flex;
+      align-items: center;
+      margin-right: 8px;
+
+      &.gbc_autoScale {
+        height: 16px !important;
+        width: 16px !important;
+      }
+    }
+    > .topMenuGroupText {
+      flex: 1 1 auto;
+    }
+  }
+
+  .gbc_TopMenuGroupWidget {
+    .gbc_ImageWidget.hidden + .topMenuGroupText {
+      padding-left: 24px;
+    }
+
+    .topMenuGroupCaret{
+      margin-left:8px;
+      @extend .caret-right;
+    }
+  }
+
+  .gbc_TopMenuCommandWidget{
+    span {
+      user-select: none;
+      color:inherit;
+    }
+  }
+
+  /* Arabic */
+  &.reverse{
+    .gbc_TopMenuGroupWidget, .gbc_TopMenuCommandWidget {
+
+      .gbc_ImageWidget{
+        margin-left:8px;
+        margin-right: 0px;
+      }
+
+      .topMenuGroupCaret{
+        margin-left:0px;
+        margin-right:8px;
+        transform: scaleX(-1);
+      }
+    }
+  }
+}
+
+

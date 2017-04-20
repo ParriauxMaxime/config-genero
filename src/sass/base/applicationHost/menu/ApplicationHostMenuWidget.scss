@@ -1,0 +1,134 @@
+.gbc_ApplicationHostMenuWidget {
+
+  .error a:after{
+    content: "\F026";
+    color: #ff706c;
+    position: absolute;
+    top: -5px;
+    font: normal normal normal 14px/1 "Material Design Icons";
+  }
+
+  > ul {
+    display: flex;
+    overflow: hidden;
+    > li{flex: 0 0 auto;}
+  }
+
+  .gbc_ImageWidget:not(.gbc_fixedSvg)  {
+    margin-left: 4px;
+    @extend .icon;
+  }
+
+  .mt-sidebar-toggle{
+    .gbc_ImageWidget {
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .mt-sidebar-action-toggle {
+    display: none;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: $gbc-toggle-right-sidebar-min-width) {
+
+  .mt-toolbar a, .mt-toolbar a:focus, .mt-toolbar a:visited, .mt-sidebar-action-toggle.open{
+    color: $gbc-primary-medium-color;
+
+   &:hover{
+     color:$gbc-primary-color;
+   }
+  }
+
+  .gbc_ApplicationHostMenuWidget {
+
+    > ul.mt-actions {
+      right: -720px;
+      display: flex;
+      background: $gbc-secondary-background-color;
+      position: absolute;
+      top: 0;
+      z-index: 58;
+
+      height: 100%;
+      line-height: $gbc-margin-ratio*72px;
+      font-size: $gbc-font-size-ratio*16px;
+
+
+      flex-direction: column;
+      align-items: flex-start;
+      transition: right 0.3s ease;
+      box-shadow: 1px 2px 9px 3px rgba(0, 0, 0, 0.24);
+
+      &:after{
+        content: "";
+        position: fixed;
+        background: black;
+        width: 0;
+        height: 0;
+        pointer-events: none;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: opacity 0.3s ease;
+      }
+    }
+
+    > ul.mt-actions.open {
+
+      li.gbc_ApplicationHostMenuRuntimeWidget{
+        display: none;
+      }
+      /*
+      &:after{
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        pointer-events: all;
+      }
+
+*/
+      right: 0;
+
+
+      li{
+        display: block;
+        margin: 0 7px;
+        
+        i:before{
+          vertical-align: middle;
+        }
+        i:after{
+          content: attr(title);
+          margin-left: 3px;
+          font-weight: bold;
+          height: $gbc-margin-ratio*72px;
+          line-height: $gbc-margin-ratio*72px;
+          font-size: $gbc-font-size-ratio*16px;
+          font-family: "Droid Sans", sans-serif;
+          vertical-align: middle;
+        }
+        a small{
+          display: none;
+        }
+      }
+
+    }
+
+    > .mt-sidebar-action-toggle {
+      display: flex;
+      align-self: center;
+      z-index: 58;
+    }
+
+
+  }
+}
+

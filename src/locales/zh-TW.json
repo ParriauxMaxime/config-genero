@@ -1,0 +1,116 @@
+{
+  "gwc": {
+    "lngName": "繁体中文 (Traditional)",
+    "app": {
+      "ending": {
+        "title": "應用程式結束",
+        "session": "session編號"
+      },
+      "notFound": {
+        "title": "應用程式沒有被發現",
+        "message": "應用程式 __appId__ 沒有啟動，因為它沒有被發現。 <br> 要確保你的應用程式存在，並嘗試重新開機相同的應用程式"
+      },
+      "error": {
+        "message": "應用程式遇到問題"
+      },
+      "forbidden": {
+        "message": "應用程式遇到存取問題"
+      },
+      "webcompNotFound": {
+        "message": "Webcomponent not found or method 'onICHostReady' is not present : this application cannot continue!"
+      },
+      "autologout": {
+        "message": "您已登出"
+      },
+      "uaProxy": {
+        "message": "應用程式意外停止"
+      },
+      "logs": {
+        "vm": "得到VM日誌",
+        "proxy": "得到代理日誌"
+      },
+      "waiting": "正在等待連接",
+      "restart": "重新開機同一應用程式",
+      "busy": "應用程式正忙",
+      "run": "運行",
+      "close": "關閉",
+      "networkError": "應用程式不再可用（錯誤 %1 ）。 ",
+      "unexpectedClosingWarningMessage": "Genero應用程式仍在運行。<br>如果你現在離開，一些資料可能會丟失。 \n請使用應用程式的使用者介面導航在離開該頁面之前，退出應用程式。 "
+    },
+    "welcome": {
+      "history": "歷史",
+      "bookmark": "書簽",
+      "urlLauncher": "UA Url發射器"
+    },
+    "date": {
+      "monthList": "一月 , 二月 , 三月 , 四月 , 五月 , 六月 , 七月 , 八月 , 九月 , 十月 , 十一月 , 十二月",
+      "dayList": " 星期日 , 星期一 , 星期二 , 星期三 , 星期四 , 星期五 , 星期六",
+      "weekdaysShort": "周日 , 週一 , 週二 , 週三 , 週四 , 週五 , 週六",
+      "previousMonth": "上個月",
+      "nextMonth": "下個月",
+      "midnight": "午夜",
+      "noon": "中午"
+    },
+    "button": {
+      "ok": "OK",
+      "cancel": "取消"
+    },
+    "coNtextMenu": {
+      "restoreColumnSort": "重置列順序",
+      "showAllColumns": "顯示所有列",
+      "disable": "停用",
+      "readOnly": "只能讀取",
+      "clearSettings": "清除設置",
+      "restoreDefaultSettings": "重新設置",
+      "clearStoredSettingsQuestion": "你想清除存儲的設置？（請重新開機應用程式使更改生效。）",
+      "freezeLeft": "向左凍結",
+      "freezeRight": "向右凍結",
+      "unfreezeAll": "全部解凍",
+      "hideAllButSelected": "除了選的隱藏所有"
+    },
+    "file": {
+      "upload": {
+        "droporclick": "在這裡放下檔或奌擊上傳。",
+        "select": "選擇檔",
+        "processing": "上傳正在進行",
+        "nofile": "未提供檔",
+        "upload": "上傳",
+        "ready": "準備上傳",
+        "waiting": "等候",
+        "confirmation": "上傳檔?",
+        "uploading": "正在上傳",
+        "required": "你必須選擇檔上傳",
+        "accept": "期望檔副檔名"
+      },
+      "clickForDownload": "點擊此處如果下載沒有自動啟動。",
+      "select": "選擇檔"
+    },
+    "storedSettings": {
+      "configuration": "存儲的設置配置",
+      "settings": "存儲的設置",
+      "uiLanguage": "介面語言",
+      "disable": "停用存儲的設置",
+      "enable": "啟用存儲的設置",
+      "reset": "重置存儲的設置",
+      "confirm": "你確定?",
+      "changed": "存儲的設置已被更改。 請重新開機應用程式以使更改生效。",
+      "done": "完成!",
+      "message": "Message",
+      "messageContent": "Something is wrong with your browser's local storage"
+    },
+    "settings": "設置",
+    "decimalSeparator": ".",
+    "session": {
+      "waitingend": {
+        "title": "Your session is still running",
+        "message": "Your current session is still running. If you close this page, all pending applications in this session will be terminated."
+      }
+    },
+    "main": {
+      "sidebar": {
+        "title": "My Genero applications",
+        "multitab_title": "My Application's windows"
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.gbc_ButtonWidget {
+  display: flex;
+  padding: 0 $gbc-margin-ratio*4px;
+  cursor: pointer;
+  [processing] & {
+    pointer-events: none;
+  }
+  [processing] &[interruptable] {
+    pointer-events: all;
+    cursor: pointer !important;
+  }
+  &.gbc_Focus>.mt-button{
+    background-color: $gbc-primary-medium-color;
+  }
+
+  &.buttonType_link{
+    cursor: default;
+  }
+
+  /* Needed for IE */
+  .g_measuring &.g_measureable{
+    flex-direction: column;
+  }
+}
+[__ButtonWidget].mt-button {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  user-select: none;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+
+  min-width: $field-default-height;
+  min-height: $field-default-height;
+  >.gbc_imageContainer {
+    padding:  $gbc-margin-ratio*2px;
+    > .gbc_ImageWidget {
+      fill: $gbc-secondary-text-color;
+      svg {
+        min-width: 16px;
+        min-height: 16px;
+      }
+    }
+    &.gbc_autoScale {
+      overflow: hidden;
+      width: $gbc-font-size-ratio*24px;
+      height: $gbc-font-size-ratio*24px;
+      > .gbc_ImageWidget {
+        max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+        img {
+          flex: 0 0 auto;
+          display: block;
+          align-self: center;
+          max-width: 100%;
+          max-height: 100%;
+        }
+        svg {
+          color: red;
+          min-width: 16px;
+          min-height: 16px;
+        }
+      }
+    }
+  }
+
+  .g_measuring & {
+    height:auto;
+  }
+}
+span[__ButtonWidget] {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+[__ButtonWidget].hasImage span[__ButtonWidget] {
+  text-align: left;
+}
+
+[__ButtonWidget].hasImage:not(.hasText) > .mt-button>span {
+  display: none;
+}

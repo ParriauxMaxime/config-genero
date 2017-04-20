@@ -1,0 +1,23 @@
+.gbc_ApplicationHostAboutWidget {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  > .mt-dialog-pane {
+    padding: 0 32px 32px 32px;
+  }
+
+  .close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 1.2em;
+
+    &:hover{
+      color: $gbc-primary-color;
+      cursor: pointer;
+    }
+  }
+
+}

@@ -1,0 +1,31 @@
+<!--
+ FOURJS_START_COPYRIGHT(D,2014)
+ Property of Four Js*
+ (c) Copyright Four Js 2014, 2017. All Rights Reserved.
+ * Trademark of Four Js Development Tools Europe Ltd
+   in the United States and elsewhere
+ 
+ This file can be modified by licensees according to the
+ product manual.
+ FOURJS_END_COPYRIGHT
+-->
+<div class="menu">
+  <div class="panel panel-primary">
+    <div class="panel-heading">GBC</div>
+    <div class="panel-body">
+      {{>menupart}}
+    </div>
+  </div>
+  <div class="panel panel-danger orphans">
+    <div class="panel-heading">orphan documentation items</div>
+    <div class="panel-body collapse">
+      <ul>{{#each orphans}}{{> menuitem}}{{/each}}</ul>
+    </div>
+  </div>
+</div>
+<div class="descriptions">
+  {{> description}}
+  {{#each orphans}}
+      <div id="desc-{{___id}}" class="jsOrphan">{{>fulldesc}}</div>
+  {{/each}}
+</div>

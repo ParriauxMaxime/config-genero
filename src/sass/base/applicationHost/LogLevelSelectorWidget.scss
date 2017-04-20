@@ -1,0 +1,52 @@
+/// FOURJS_START_COPYRIGHT(D,2017)
+/// Property of Four Js*
+/// (c) Copyright Four Js 2017, 2017. All Rights Reserved.
+/// * Trademark of Four Js Development Tools Europe Ltd
+///   in the United States and elsewhere
+///
+/// This file can be modified by licensees according to the
+/// product manual.
+/// FOURJS_END_COPYRIGHT
+
+.gbc_LogLevelSelectorWidget {
+  font-family: "Droid Sans Mono", monospace;
+  > div {
+    display: inline-block;
+    padding: 2px;
+    border-width: 0;
+    border-style:solid;
+    width: 50px !important;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  > div.active, .active ~ div {
+    padding: 0;
+    border-width: 2px;
+  }
+
+  >.debug {
+    color: #c90;
+    border-color: #c90;
+  }
+  >.log {
+    color: #0c0;
+    border-color: #0c0;
+  }
+  >.info {
+    color: #00c;
+    border-color: #00c;
+  }
+  >.warn {
+    color: #cc0;
+    border-color: #cc0;
+  }
+  >.error {
+    color: #c00;
+    border-color: #c00;
+  }
+  >.none {
+    color: #000;
+    border-color: #000;
+  }
+}

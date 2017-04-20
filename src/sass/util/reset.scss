@@ -1,0 +1,38 @@
+html {
+  margin: 0;
+  padding: 0;
+  border:0;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body{
+  display: flex;
+  background-color: $gbc-secondary-background-color;
+  color: $gbc-primary-text-color;
+  fill: $gbc-primary-text-color;
+}
+
+input, label, select{
+  display: inline-block;
+}
+
+label{
+  font-weight: normal;
+}
+
+input, textarea, keygen, select, button {text-transform: inherit;}
+
+a{cursor:pointer;}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+// NOTE : ugly fix because chrome won't well redraw input when removing readonly attribute while it just got focus
+// see GBC-1070
+input[readonly], textarea[readonly] {transform: translateZ(0);}

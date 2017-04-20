@@ -1,0 +1,30 @@
+
+@media screen and (min-width: $gbc-sidebar-always-visible-min-width) {
+  .mt-centralcontainer {
+    left:$gbc-sidebar-default-width;
+  }
+  .mt-sidebar-backdrop {
+    display: none;
+  }
+  .mt-sidebar-toggle {
+    display: none;
+    pointer-events: none;
+  }
+  .mt-toolbar-title {
+    margin-left: 24px;
+  }
+  .mt-sidebar:not(.mt-sidebar-unavailable) {
+    left:0;
+  }
+}
+@media screen and (max-width: 620px) {
+  .mt-side-by-side {
+    display: block;
+    overflow: auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  .mt-sidebar-content {
+    width: 300px;
+  }
+}

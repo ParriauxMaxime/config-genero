@@ -1,0 +1,41 @@
+.gbc_FormWidget {
+  width: auto !important;
+  height: auto !important;
+  flex : 1 1 auto;
+  position:relative;
+
+  >.containerElement {
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+  }
+  &.overflownX >.containerElement{
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  &.overflownY >.containerElement{
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  &.overflownX.overflownY >.containerElement{
+    overflow-x: scroll;
+    overflow-y: scroll;
+  }
+
+}
+.gbc_TraditionalContainerWindow {
+  .gbc_FormWidget {
+    font-family: monospace !important;
+    font-size: 1.3em * $gbc-font-size-ratio;
+  }
+
+  .gbc_MenuWidget.disabled {
+    display: none;
+  }
+}
+//ugly safari hack for overflow measurement
+.safariMeasure{
+  position:absolute;
+}

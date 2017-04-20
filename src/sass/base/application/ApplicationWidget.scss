@@ -1,0 +1,31 @@
+.gbc_ApplicationWidget {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+
+  &.gbc_out_of_view{
+    top: -10000px;
+    left: -10000px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  &[processing] {
+    cursor: wait !important;
+    input{
+      cursor: wait !important;
+    }
+  }
+}
+[__ApplicationWidget].containerElement{
+  flex: 1 1 auto;
+  display: flex;
+  overflow: hidden;
+  > * {
+    flex: 1 1 auto;
+  }
+}

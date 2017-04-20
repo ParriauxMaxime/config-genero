@@ -22,22 +22,22 @@ try {
 catch (e) {
     console.log('Serving development build with nwb middleware')
     console.log('Run `npm run build` to create a production build')
-    app.use(require('nwb/express')(express))
+    app.use(require('nwb/express')(express, {entry: 'app/index.js'}))
 }
 
-app.get('/overview', function(req, res) {
+app.get('/overview', function (req, res) {
     res.send()
 });
 
-app.post('/saveData', function(req, res) {
+app.post('/saveData', function (req, res) {
     Parse(req.body, () => {
-        grunt.tasks(['__compile'], {}, function() {
+        grunt.tasks(['__compile'], {}, function () {
             grunt.log.ok('Done running tasks.');
         });
         res.send('Ok');
     });
 });
 
-app.listen(3000, function() {
+app.listen(3000, function () {
     console.log('Express server started on localhost:3000');
 });

@@ -1,0 +1,124 @@
+.gbc_MenuWidget {
+  min-width: $gbc-margin-ratio*150px;
+  display: flex;
+
+  .mt-dialog-title {
+    text-align: center;
+  }
+
+  &>.gbc_MenuWidgetTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    margin-top: $gbc-margin-ratio*8px;
+
+    .gbc_MenuWidgetText {
+      flex: 1 1 auto;
+    }
+    //hide title if in modal
+    .gbc_ModalWidget & {
+      display: none;
+    }
+  }
+
+  &.gbc_MenuWidget_horizontal {
+    flex-direction: row;
+    .containerElement {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  &.gbc_MenuWidget_vertical {
+    flex-direction: column;
+    .containerElement {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &.gbc_ModalMenu .containerElement{
+    justify-content: flex-end;
+
+    & > .gbc_ButtonWidget {
+      min-width: $gbc-margin-ratio*100px;
+    }
+  }
+
+  &.gbc_ModalMenu.gbc_style_winmsg .containerElement{
+    justify-content: center;
+  }
+
+
+
+  &>.gbc_MenuWidgetScrollContainer {
+    display: flex;
+    flex: 1 1 auto;
+    overflow-y: auto;
+
+    .containerElement {
+      display: flex;
+      flex:1 1 auto;
+
+      &>*{
+        margin: $gbc-margin-ratio*3px 0;
+      }
+      &>.gbc_ButtonWidget{
+        flex: 0 0 auto;
+      }
+    }
+  }
+
+  >*{
+    margin: $gbc-margin-ratio*3px;
+  }
+
+  img{
+    height:auto !important;
+    display: block;
+    align-self: center;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &.disabled{
+    .gbc_ButtonWidget {
+      pointer-events: none;
+      .mt-button {
+        @extend .mt-button.disabled;
+      }
+    }
+  }
+
+
+}
+
+.gbc_MenuWidget.disabled:not(:last){
+  display: none;
+}
+
+.dd_MenuWidget > .containerElement > * {
+  margin: $gbc-margin-ratio*3px 0;
+}
+
+.gbc_ModalMenuDialog {
+  > .mt-dialog-pane {
+    padding: $gbc-margin-ratio*16px;
+    min-width: 300px;
+
+    .mt-dialog-header {
+      padding: $gbc-field-height-ratio*8px 0 $gbc-field-height-ratio*16px 0;
+    }
+    .mt-dialog-content {
+      padding: $gbc-field-height-ratio*16px 0;
+    }
+  }
+}
+.gbc_ModalWindowDialog .gbc_ModalMenuDialog {
+  position: relative;
+  background-color: inherit !important;
+
+  > .mt-dialog-pane {
+    box-shadow: none;
+  }
+}

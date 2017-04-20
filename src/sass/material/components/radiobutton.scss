@@ -1,0 +1,33 @@
+.mt-radiobutton {
+  position: relative;
+  cursor: default;
+  width: $gbc-radiobutton-size;
+  height: $gbc-radiobutton-size;
+  border: 2px solid $gbc-secondary-color;
+  border-radius: 50%;
+
+  &.checked {
+    border-color: $gbc-primary-color;
+
+    & > .mt-radiobutton-mark {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      height: $gbc-radiobutton-size - 8px;
+      width: $gbc-radiobutton-size - 8px;
+      border-radius: 50%;
+      background-color: $gbc-primary-color;
+    }
+  }
+}
+
+.disabled {
+  .mt-radiobutton{
+    border-color: $gbc-disabled-color;
+    &.checked {
+      .mt-radiobutton-mark {
+        background-color: $gbc-disabled-color;
+      }
+    }
+  }
+}

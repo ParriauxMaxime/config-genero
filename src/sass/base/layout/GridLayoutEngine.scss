@@ -1,0 +1,28 @@
+.g_GridLayoutEngine {
+  position: relative;
+  > .g_GridElement {
+    z-index: 1;
+    position: absolute;
+    &.gl_gridElementHidden{
+      opacity:0;
+      pointer-events: none;
+    }
+
+    &.g_GridElement_scrollzone {
+      z-index: 0;
+    }
+    &.g_GridElement_scrollignore {
+      z-index: 1;
+    }
+  }
+  &.g_scrolling {
+    .g_GridElement_scrollignore {
+      pointer-events: none;
+    }
+  }
+}
+.g_measuring .g_GridElement,
+.g_measuring .g_GridElement.g_gridChildrenInParentChild{
+  width: auto !important;
+  height: auto !important;
+}

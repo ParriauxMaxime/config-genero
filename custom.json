@@ -1,0 +1,6 @@
+{
+  "compile": {
+    "mode": "cdev",
+    "customization": "customization/test1"
+  }
+}

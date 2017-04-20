@@ -1,0 +1,36 @@
+.gbc_DropDownContainerWidget {
+  /* size & position */
+  position: absolute;
+  height: auto;
+  width:auto;
+  z-index:$z-index-DropDown;
+
+  &:not(.dd_DateEditWidget):not(.dd_DateTimeEditWidget) {
+    overflow: auto;
+  }
+
+  /* Look */
+  background: $gbc-secondary-background-color;
+
+  /* Font & shadow */
+  &:not(.hidden) {
+    @include list-shadow;
+  }
+
+  .gbc_ImageWidget {
+    overflow: hidden;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    svg {
+      flex: 1 1 auto;
+    }
+    img{
+      flex: 0 0 auto;
+      display: block;
+      align-self: center;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

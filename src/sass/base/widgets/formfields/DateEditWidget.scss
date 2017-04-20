@@ -1,0 +1,25 @@
+.dd_DateEditWidget, .dd_DateTimeEditWidget, .dd_DummyDateEditWidget, .dd_DummyDateTimeEditWidget {
+  > .gbc_DropDownWidget {
+    right: auto !important;
+    text-align: right;
+
+    > .gbc_DateEditButton {
+      display: inline-block;
+      margin: $gbc-margin-ratio*6px;
+      cursor: pointer;
+    }
+
+  }
+}
+
+[__DateEditWidget], [__DateTimeEditWidget] {
+  cursor:default;
+  &.datepicker{
+    flex: 1 1 auto;
+    width:0px;
+  }
+  input{
+    cursor:text;
+    font-family: inherit;
+  }
+}

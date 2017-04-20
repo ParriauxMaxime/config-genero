@@ -1,0 +1,119 @@
+.gbc_ApplicationHostSettingsWidget {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .mt-dialog-content {
+    margin-top: 15px;
+
+    .flex-wrapper{
+      display: flex;
+    }
+
+    div {
+      width: initial;
+
+      .settingTitle {
+        flex: 1 1 auto;
+        margin-right: 20px;
+        font-weight: bold;
+      }
+      .lngSettings {
+        flex: 1 1 auto;
+      }
+
+      .clearStoredSettings, .lngSettings{
+        //width: 200px;
+      }
+    }
+
+    .message{
+      background-color: #f2dede;
+      padding: 9px;
+      margin-top: 9px;
+      border-radius: 2px;
+
+      .settingTitle{
+        margin-bottom: 4px;
+        &:before{
+          content: "\F026";
+          font: normal normal normal 14px/1 "Material Design Icons";
+          margin-right: 3px;
+        }
+      }
+    }
+
+
+  }
+
+  .mt-dialog-footer{
+    color:$mt-red-500;
+  }
+
+  .gbc_SettingsWidget {
+    width: 100%;
+    .settingsTopic {
+      border-top: 1px solid rgba(0, 0, 0, .1);
+      margin-top: 0.8em;
+      padding-top: 0.8em;
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .mt-dialog-header {
+    font-size: 1.2em;
+
+    .mt-dialog-actions{
+      margin-left: 1.2em;
+      font-size: 1.2em;
+      &:hover{
+        color: $gbc-primary-color;
+      }
+    }
+
+  }
+
+  &.movable .mt-dialog-header{
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+  }
+  &.movable.moving {
+
+    .mt-dialog-header {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+      opacity: 1;
+    }
+    .mt-dialog-pane {
+      border: 1px dotted $gbc-primary-color;
+      opacity: 0.6;
+    }
+  }
+
+  &.noselect{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+  }
+
+
+
+  h4{
+    font-size: 1em;
+    padding: 10px;
+    width: 100%;
+    border-top: 1px solid #CCC;
+  }
+
+
+
+
+}

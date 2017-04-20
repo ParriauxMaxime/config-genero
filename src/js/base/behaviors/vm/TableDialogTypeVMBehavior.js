@@ -1,0 +1,55 @@
+/// FOURJS_START_COPYRIGHT(D,2015)
+/// Property of Four Js*
+/// (c) Copyright Four Js 2015, 2017. All Rights Reserved.
+/// * Trademark of Four Js Development Tools Europe Ltd
+///   in the United States and elsewhere
+/// 
+/// This file can be modified by licensees according to the
+/// product manual.
+/// FOURJS_END_COPYRIGHT
+
+"use strict";
+
+modulum('TableDialogTypeVMBehavior', ['BehaviorBase'],
+  /**
+   * @param {gbc} context
+   * @param {classes} cls
+   */
+  function(context, cls) {
+    /**
+     * @class classes.TableDialogTypeVMBehavior
+     * @extends classes.BehaviorBase
+     */
+    cls.TableDialogTypeVMBehavior = context.oo.Singleton(cls.BehaviorBase, function($super) {
+      /** @lends classes.TableDialogTypeVMBehavior.prototype */
+      return {
+        __name: "TableDialogTypeVMBehavior",
+
+        watchedAttributes: {
+          anchor: ['dialogType']
+        },
+
+        /**
+         *
+         */
+        _apply: function(controller, data) {
+          var widget = controller.getWidget();
+          if (widget) {
+            var dialogType = controller.getAnchorNode().attribute('dialogType');
+
+            if (widget._resetItemsSelection) {
+              widget._resetItemsSelection();
+            }
+
+            if (widget.setInputMode) {
+              widget.setInputMode(!(dialogType === "Display" || dialogType === "DisplayArray"));
+            }
+            if (widget.setDndItemEnabled) {
+              widget.setDndItemEnabled(dialogType === "DisplayArray");
+            }
+          }
+
+        }
+      };
+    });
+  });

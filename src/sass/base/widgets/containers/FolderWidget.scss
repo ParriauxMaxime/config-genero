@@ -1,0 +1,195 @@
+$gbc-FolderWidget-separator-color: rgba(0, 0, 0, 0.12) !default;
+
+.gbc_FolderWidget {
+  padding: $gbc-margin-ratio*8px;
+
+  .g_measuring {
+    &.g_measureable {
+      overflow: visible;
+    }
+    .mt-tab-items {
+      overflow: visible;
+    }
+    .mt-tab-items-container {
+      overflow: visible;
+    }
+  }
+
+  /* Arabic */
+  &.reverse {
+    i.zmdi-chevron-left, i.zmdi-chevron-right {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+.mt-tab-items-container[__FolderWidget] {
+  min-width: 1px;
+  min-height: 1px;
+}
+
+.mt-tab-title[__FolderWidget] {
+  .gbc_ImageWidget {
+    width: $gbc-font-size-ratio*24px;
+    height: $gbc-font-size-ratio*24px;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  &.mt-tab-current {
+    color: $gbc-primary-color;
+  }
+}
+
+.mt-tabs[__FolderWidget] {
+  background-color: $gbc-secondary-background-color;
+  width: 100%;
+  height: 100%;
+  @include mt-card-border($gbc-margin-ratio, $gbc-font-size-ratio);
+}
+
+.mt-tab-titles-bar[__FolderWidget] {
+  line-height: $gbc-font-size-ratio*26px;
+  padding: $gbc-margin-ratio*8px $gbc-margin-ratio*8px 0 $gbc-margin-ratio*8px;
+}
+
+.mt-tab-items[__FolderWidget] {
+  padding: $gbc-margin-ratio*8px;
+}
+
+.mt-tab-previous.overflown-previous {
+  color: $gbc-primary-color;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.mt-tab-next.overflown-next {
+  color: $gbc-primary-color;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.mt-tabs[__FolderWidget=top] {
+  flex-direction: column;
+}
+
+.mt-tab-titles-container[__FolderWidget=top] {
+  flex-direction: row;
+  .mt-tab-title {
+    border-left: solid 1px $gbc-FolderWidget-separator-color;
+    border-bottom: solid 1px $gbc-FolderWidget-separator-color;
+    &:last-child {
+      border-right: solid 1px $gbc-FolderWidget-separator-color;
+    }
+    .gbc_ImageWidget > img {
+      vertical-align: sub;
+    }
+    &.mt-tab-current {
+      color: $gbc-primary-color;
+      border-bottom: solid 2px $gbc-primary-color;
+    }
+  }
+}
+
+.mt-tab-titles-bar[__FolderWidget=top], .mt-tab-titles-bar[__FolderWidget=bottom] {
+  flex-direction: row;
+}
+
+.mt-tab-previous[__FolderWidget=top], .mt-tab-previous[__FolderWidget=bottom] {
+  .zmdi-chevron-up {
+    display: none;
+  }
+}
+
+.mt-tab-next[__FolderWidget=top], .mt-tab-next[__FolderWidget=bottom] {
+  .zmdi-chevron-down {
+    display: none;
+  }
+}
+
+.mt-tabs[__FolderWidget=bottom] {
+  flex-direction: column-reverse;
+}
+
+.mt-tab-titles-container[__FolderWidget=bottom] {
+  flex-direction: row;
+  .mt-tab-title {
+    border-left: solid 1px $gbc-FolderWidget-separator-color;
+    border-top: solid 1px $gbc-FolderWidget-separator-color;
+    &:last-child {
+      border-right: solid 1px $gbc-FolderWidget-separator-color;
+    }
+    &.mt-tab-current {
+      color: $gbc-primary-color;
+      border-top: solid 2px $gbc-primary-color;
+    }
+  }
+}
+
+.mt-tabs[__FolderWidget=left] {
+  flex-direction: row;
+}
+
+.mt-tab-titles-container[__FolderWidget=left] {
+  flex-direction: column;
+  .mt-tab-title {
+    border-top: solid 1px $gbc-FolderWidget-separator-color;
+    border-right: solid 1px $gbc-FolderWidget-separator-color;
+    &:last-child {
+      border-bottom: solid 1px $gbc-FolderWidget-separator-color;
+    }
+    &.mt-tab-current {
+      color: $gbc-primary-color;
+      border-right: solid 2px $gbc-primary-color;
+    }
+  }
+}
+
+.mt-tab-titles-bar[__FolderWidget=left], .mt-tab-titles-bar[__FolderWidget=right] {
+  flex-direction: column;
+}
+
+.mt-tab-titles[__FolderWidget=left] {
+  display: block;
+}
+
+.mt-tab-previous[__FolderWidget=left], .mt-tab-previous[__FolderWidget=right] {
+  width: auto;
+  .zmdi-chevron-left {
+    display: none;
+  }
+}
+
+.mt-tab-next[__FolderWidget=left], .mt-tab-next[__FolderWidget=right] {
+  width: auto;
+  .zmdi-chevron-right {
+    display: none;
+  }
+}
+
+.mt-tabs[__FolderWidget=right] {
+  flex-direction: row-reverse;
+}
+
+.mt-tab-titles[__FolderWidget=right] {
+  display: block;
+}
+
+.mt-tab-titles-container[__FolderWidget=right] {
+  flex-direction: column;
+  .mt-tab-title {
+    border-top: solid 1px $gbc-FolderWidget-separator-color;
+    border-left: solid 1px $gbc-FolderWidget-separator-color;
+    &:last-child {
+      border-bottom: solid 1px $gbc-FolderWidget-separator-color;
+    }
+    &.mt-tab-current {
+      color: $gbc-primary-color;
+      border-left: solid 2px $gbc-primary-color;
+    }
+  }
+}
+
+
+

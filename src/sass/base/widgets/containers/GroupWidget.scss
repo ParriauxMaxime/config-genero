@@ -1,0 +1,44 @@
+.gbc_GroupWidget {
+  padding: $gbc-margin-ratio*4px;
+  display: flex;
+
+  .g_measuring &.g_measureable {
+    flex-direction: column;
+  }
+  .g_measured &.g_measureable {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .g_measured .g_gridChildrenInParent > &.g_measureable {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+.gbc_GroupWidgetContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  background-color: $gbc-secondary-background-color;
+  @include mt-card-border($gbc-margin-ratio, $gbc-font-size-ratio);
+}
+.gbc_NoBorder {
+  .gbc_GroupWidgetContainer {
+     @extend .gbc_NoBorder;
+    background-color: inherit;
+  }
+}
+.gbc_GroupWidgetContent {
+  padding: $gbc-margin-ratio*6px;
+  flex: 1 1 auto;
+
+  > .gbc_GroupTitleWidget:not(.empty) {
+    padding: $gbc-margin-ratio*4px 0 $gbc-margin-ratio*8px 0;
+  }
+}
+.gbc_GroupTitleWidget {
+  font-weight: bold;
+  white-space: nowrap;
+}
+.g_measuring .gbc_FormWidget .gbc_GroupTitleWidget.empty.g_measureable{
+  display: none !important;
+}

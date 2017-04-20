@@ -1,0 +1,36 @@
+.gbc_RadioGroupWidget, .gbc_DummyRadioGroupWidget {
+  display: inline-flex;
+  white-space: nowrap;
+  cursor: default;
+  
+  .gbc_RadioGroupItem {
+align-items: center;
+    display: inline-flex;
+
+    > span {
+      margin: 0 $gbc-margin-ratio*8px;
+    }
+    margin: 2px 0;
+    padding: 2px;
+  }
+  span {
+    white-space: nowrap;
+  }
+  &.gbc_RadioGroupWidget_vertical, &.gbc_DummyRadioGroupWidget_vertical{
+    flex-direction: column;
+    > .gbc_RadioGroupItem {
+      display: flex;
+    }
+    .g_measuring &.g_measureable {
+      flex-direction: column;
+    }
+  }
+
+  &.gbc_Focus{
+    .gbc_RadioGroupItem.aimed{
+      outline-style: dotted;
+      outline-width: 1px;
+      outline-color: $gbc-separator-color;
+    }
+  }
+}

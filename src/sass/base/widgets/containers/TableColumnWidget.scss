@@ -1,0 +1,159 @@
+.gbc_TableColumnWidget {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  vertical-align: top;
+  min-height: 1px;
+
+  &.resizing {
+    border-right: solid 1px $gbc-TableWidget-border-color;
+  }
+  &.reordering_right {
+    border-right: dotted 1px $gbc-TableWidget-border-color;
+  }
+  &.reordering_left {
+    border-left: dotted 1px $gbc-TableWidget-border-color;
+  }
+
+  .valueHidden {
+    display: none !important;
+  }
+}
+
+.gbc_TableAfterLastItemZone {
+  flex: 1 0 auto;
+}
+
+[__tableColumnItemWidget]:not(.gbc_TreeAnchor):not(.gbc_TableItemImage) {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: stretch;
+}
+
+[__tableColumnItemWidget].containerElement {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+
+  > * {
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+
+  .mt-field {
+    box-shadow: none;
+    border: none;
+  }
+
+  .gbc_WidgetBase {
+    padding: $gbc-margin-ratio*$gbc-table-margin;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: inherit;
+    > * {
+     padding: 0;
+    }
+  }
+
+  .gbc_RadioGroupWidget {
+    display: block; // necessary for vertical radiogroup widget
+  }
+
+  .gbc_ImageWidget {
+    box-shadow: none;
+    &.gbc_fixedSvg{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .gbc_TextEditWidget, .gbc_DummyTextEditWidget {
+    flex-direction: column;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+
+  .gbc_ComboBoxWidget {
+    &.disabled, &.readonly {
+      .zmdi-menu-down {
+        display: none;
+      }
+    }
+  }
+
+  .gbc_ButtonEditWidget, .gbc_DummyButtonEditWidget{
+    padding: 0;
+
+    &.disabled .gbc_ButtonWidget {
+      display: none;
+    }
+
+    .gbc_ButtonWidget, .gbc_EditWidget {
+      height: 100%;
+    }
+
+    .gbc_EditWidget {
+      padding: 0;
+      margin: 0 0.5*$gbc-table-margin;
+    }
+
+    .gbc_ImageWidget, img {
+      max-height: 20px;
+      max-width: 20px;
+      padding: 0;
+    }
+  }
+}
+
+.gbc_TableColumnItemWidget {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.gbc_TableColumnItemWidget .gbc_TextEditWidget .textEditHtml{
+  white-space: normal;
+}
+
+
+.gbc_TreeAnchor {
+  display: flex;
+  flex: 0 0 auto;
+  cursor: default;
+  align-self: center;
+  width: $gbc-font-size-ratio*16px;
+  text-align: center;
+  font-size: $gbc-font-size-ratio*14px;
+}
+
+.gbc_TableItemImage {
+  display: flex;
+  flex: 0 0 auto;
+  align-self: center;
+  height: auto;
+  width: auto;
+  max-height: 100%;
+  & > .gbc_ImageWidget {
+    margin-left: 2px;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & > img {
+      flex:0 0 auto;
+      display: block;
+    }
+  }
+}
+
+.g_TableColumnWidthMeasuring {
+  position: absolute;
+  left: -10000px;
+  top: -10000px;
+  width: auto !important;
+}
+

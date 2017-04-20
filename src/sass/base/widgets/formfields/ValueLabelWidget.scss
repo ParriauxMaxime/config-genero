@@ -1,0 +1,8 @@
+.gbc_ValueLabelWidget {
+  @extend .gbc_LabelWidget;
+  line-height: 1.1em;
+  padding: 0 $gbc-margin-ratio*$gbc-combobox-margin;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+
+}

@@ -1,0 +1,118 @@
+@mixin mt-button {
+
+  min-height: $field-default-height;
+  padding-left: $gbc-margin-ratio*8px;
+  padding-right: $gbc-margin-ratio*8px;
+  min-width: $button-default-width;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 $gbc-margin-ratio*2px $gbc-margin-ratio*2px 0 rgba(0, 0, 0, .14), 0 $gbc-margin-ratio*3px 1px -2px rgba(0, 0, 0, .2), 0 1px $gbc-margin-ratio*5px 0 rgba(0, 0, 0, .12);
+  background-color: $gbc-primary-color;
+  color: $gbc-secondary-text-color;
+  height:100%;
+  &:not(.disabled):hover {
+    background-color: $gbc-primary-medium-color;
+    .gbc_ImageWidget img:hover, .gbc_ImageWidget svg:hover{
+      cursor: pointer;
+    }
+
+  }
+  &:focus {
+    outline: none;
+  }
+  &:not(.disabled):active {
+    box-shadow: none;
+  }
+  &.disabled, &.disabled:focus {
+    background-color: $gbc-separator-color;
+    cursor: default;
+  }
+  &.disabled img{
+    opacity: 0.4;
+    filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  &.mt-button-flat {
+    box-shadow: none;
+    font-weight: bold;
+    background-color: transparent;
+    color: $gbc-primary-color;
+    &:not(.disabled):hover {
+      background-color: transparent;
+      color: $gbc-primary-medium-color;
+    }
+    &.disabled, &.disabled:focus {
+      color: $gbc-primary-light-color;
+    }
+  }
+
+  &.buttonType_commandLink{
+    font-weight: bold;
+    padding: 10px;
+    background-color: transparent;
+    color:inherit;
+    border: none;
+    box-shadow: none;
+    transition: box-shadow 1s;
+
+    &:not(.disabled):hover{
+      box-shadow: 0 $gbc-margin-ratio*2px $gbc-margin-ratio*2px 0 rgba(0, 0, 0, .14), 0 $gbc-margin-ratio*3px 1px -2px rgba(0, 0, 0, .2), 0 1px $gbc-margin-ratio*5px 0 rgba(0, 0, 0, .12);
+      background-color: transparent;
+    }
+    &.disabled, &.disabled:focus {
+      color: $gbc-disabled-color;
+      background-color: transparent;
+      span:before{
+        color: $gbc-disabled-color;
+      }
+    }
+
+    span:before{
+      content: mdi("arrow-right");
+      font: normal normal normal 18px / 1 "Material Design Icons";
+      vertical-align: middle;
+      color: #00D400;
+    }
+  }
+  &[__ButtonWidget].mt-button.buttonType_link{
+    cursor:default;
+    flex: 0 0 auto;
+    padding: 0;
+    color: #3b73af;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    &.disabled, &.disabled:focus {
+      background-color: transparent;
+      cursor:default;
+      text-decoration: none;
+      color: $gbc-disabled-color;
+    }
+    &:not(.disabled):hover{
+      color: #35588e;
+      background-color: transparent;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &.content-left {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &.content-right {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  &.text-hidden {
+    span {
+      display: none;
+    }
+  }
+}
+
+.mt-button{@include mt-button();}

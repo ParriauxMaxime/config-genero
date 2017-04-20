@@ -1,0 +1,44 @@
+.gbc_RipGraphicWidget {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+
+  & > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-color: $gbc-separator-color;
+  }
+  &.ul > div { /* Upper Left */
+    border-width: 1px 0 0 1px;
+    top: 50%;
+    left: 50%;
+  }
+  &.ur > div { /* Upper Right */
+    border-width: 1px 1px 0 0;
+    top: 50%;
+    right: calc(50% - 1px);
+  }
+  &.bl > div { /* Bottom Left */
+    border-width: 0 0 1px 1px;
+    bottom: calc(50% - 1px);
+    left: 50%;
+  }
+  &.br > div { /* Bottom Right */
+    border-width: 0 1px 1px 0;
+    bottom: calc(50% - 1px);
+    right: calc(50% - 1px);
+  }
+  &.ho > div { /* Horizontal */
+    border-width: 1px 0 0 0;
+    top: 50%;
+  }
+  &.ve > div { /* Vertical */
+    border-width: 0 0 0 1px;
+    left: 50%;
+  }
+}

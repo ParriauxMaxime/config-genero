@@ -1,0 +1,129 @@
+/// FOURJS_START_COPYRIGHT(D,2014)
+/// Property of Four Js*
+/// (c) Copyright Four Js 2014, 2015. All Rights Reserved.
+/// * Trademark of Four Js Development Tools Europe Ltd
+///   in the United States and elsewhere
+///
+/// This file can be modified by licensees according to the
+/// product manual.
+/// FOURJS_END_COPYRIGHT
+
+
+.techdoc {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+}
+.glyphicon-none:before {
+    content: "\2122";
+    color: transparent !important;
+}
+.menu {
+    width: 350px;
+    overflow: auto;
+    padding: 10px;
+
+    .panel-body {
+        overflow: hidden;
+    }
+    .menu-block {
+        cursor: pointer;
+        white-space: nowrap;
+        > .glyphicon {
+            zoom:0.7;
+        }
+        &>.menu-toggle{
+            transition: transform 1s;
+            transform: rotate(0deg);
+        }
+        &.open > .menu-toggle{
+            transform: rotate(90deg);
+        }
+        .menu-title {
+            display: inline-block;
+            & > .label {
+                font-size: 36%;
+                vertical-align: middle;
+            }
+        }
+    }
+    .sub-menu {
+        border-left: dotted 1px #428bca;
+        margin-left: 4px;
+        padding-left: 6px;
+    }
+    .selected {
+        color: #77f;
+        font-weight: bold;
+        background: #DDF;
+    }
+}
+.descriptions {
+  flex: 1 1 auto;
+  overflow: auto;
+    padding: 10px;
+    & > div {
+        display: none;
+/*        & > div, & > pre {
+            margin-left: 40px;
+        }
+ */   }
+
+    h1 {
+        & > .label {
+            font-size: 30%;
+            vertical-align: middle;
+        }
+        .undocumented {
+            color:#FCC;
+        }
+    }
+    h2 > .label {
+        font-size: 36%;
+        vertical-align: middle;
+    }
+    h3 > .label {
+        font-size: 45%;
+        vertical-align: middle;
+    }
+}
+.jsMethod .param {
+    display: flex;
+    & > .itemparam {
+        width: 140px;
+        border-bottom: 1px solid #f4f4f4;
+        padding-top: 4px;
+    }
+    & > .itemparamtype {
+        width: 140px;
+        border-bottom: 1px solid #f4f4f4;
+        padding-top: 4px;
+    }
+    & > .paramdesc {
+      flex: 1 1 auto;
+      border-bottom: 1px solid #f4f4f4;
+        padding-top: 4px;
+    }
+    &:after{
+        display: table;
+        content: " ";
+        clear: both;
+    }
+}
+.jsonCode {
+    max-height: 10px;
+    transition: max-height 1s;
+    &:hover {
+        max-height: 3000px;
+    }
+}
+.undocumented{
+    font-style: italic;
+    font-weight: bold;
+    color:red;
+}
+.undocumented_content{
+    font-style: italic;
+    background: #FFEEEE;
+}

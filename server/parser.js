@@ -4,7 +4,7 @@
 const fs = require('fs');
 
 function Parse(store, fn) {
-    const fileList = ['./server/customization/theme.scss.json', './server/customization/header.json'];
+    const fileList = ['./customization/test1/theme.scss.json', './customization/test1/header.json'];
     const associatedReducer = ['OverviewReducer', 'HeaderReducer'];
     let promises = [];
 

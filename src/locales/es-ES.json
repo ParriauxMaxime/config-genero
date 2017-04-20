@@ -1,0 +1,116 @@
+{
+  "gwc": {
+    "lngName": "Español",
+    "app": {
+      "ending": {
+        "title": "La aplicación finalizó",
+        "session": "ID de Sesión"
+      },
+      "notFound": {
+        "title": "La aplicación no pudo ser encontrada",
+        "message": "La aplicación __appId__ no comenzó porque no pudo ser encontrada.<br> Asegúrese de que existe la aplicación e intente reiniciar la misma aplicación"
+      },
+      "error": {
+        "message": "La aplicación ha encontrado un problema"
+      },
+      "forbidden": {
+        "message": "La aplicación ha encontrado un problema de acceso"
+      },
+      "webcompNotFound": {
+        "message": "Webcomponent not found or method 'onICHostReady' is not present : this application cannot continue!"
+      },
+      "autologout": {
+        "message": "Usted ha sido desconectado"
+      },
+      "uaProxy": {
+        "message": "La aplicación se detuvo inesperadamente"
+      },
+      "logs": {
+        "vm": "Obtener los logs de la VM",
+        "proxy": "Obtener los logs del proxy"
+      },
+      "waiting": "Esperando la conexión",
+      "restart": "Reiniciar la misma aplicación",
+      "busy": "Application is busy",
+      "run": "Ejecutar",
+      "close": "Cerrar",
+      "networkError": "La aplicación no está mas disponible (error %1).",
+      "unexpectedClosingWarningMessage": "La aplicación Genero sigue ejecutando.<br>Si se va ahora, algunos datos pueden perderse.\nUtilice la interfaz de usuario de la aplicación para salir de la aplicación antes de salir de esta página."
+    },
+    "welcome": {
+      "history": "Historial",
+      "bookmark": "Marcadores",
+      "urlLauncher": "UA Lanzador por Url"
+    },
+    "date": {
+      "monthList": "Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+      "dayList": "Domingo,Lunes,Martes,Miércoles,Jueves,Viernes,Sábado",
+      "weekdaysShort": "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+      "previousMonth": "Previous Month",
+      "nextMonth": "Next Month",
+      "midnight": "Midnight",
+      "noon": "Noon"
+    },
+    "button": {
+      "ok": "OK",
+      "cancel": "Cancel"
+    },
+    "contextMenu": {
+      "restoreColumnSort": "Restaurar orden de las columnas",
+      "showAllColumns": "Mostrar todas las columnas",
+      "disable": "Deshabilitar",
+      "readOnly": "Sólo lectura",
+      "clearSettings": "Limpiar ajustes",
+      "restoreDefaultSettings": "Restaurar configuración predeterminada",
+      "clearStoredSettingsQuestion": "Desea limpiar los ajustes almacenados ? (Por favor, reinicie la aplicación para que los cambios tengan efecto.)",
+      "freezeLeft": "Fijar a izquierda",
+      "freezeRight": "Fijar a derecha",
+      "unfreezeAll": "No fijar más",
+      "hideAllButSelected": "Esconder las otras columnas"
+    },
+    "file": {
+      "upload": {
+        "droporclick": "Drop file here or click to upload.",
+        "select": "Select file",
+        "processing": "Upload in progress",
+        "nofile": "No file provided",
+        "upload": "Upload",
+        "ready": "Listo para subir",
+        "waiting": "waiting",
+        "confirmation": "Subir el archivo ?",
+        "uploading": "Subiendo",
+        "required": "You must select a file to upload",
+        "accept": "Expecting a file with extension"
+      },
+      "clickForDownload": "Haga clic aquí si la descarga no se inicia automáticamente.",
+      "select": "Select file"
+    },
+    "storedSettings": {
+      "configuration": "Stored Settings configuration",
+      "settings": "Ajustes almacenados",
+      "uiLanguage": "Interface language",
+      "disable": "Disable Stored Settings",
+      "enable": "Enable Stored Settings",
+      "reset": "Reset Stored Settings",
+      "confirm": "Are you sure?",
+      "changed": "Los ajustes almacenados han sido modificados. Por favor, reinicie la aplicación para que los cambios tengan efecto",
+      "done": "Done!",
+      "message": "Message",
+      "messageContent": "Something is wrong with your browser's local storage"
+    },
+    "settings": "Configuración",
+    "decimalSeparator": ",",
+    "session": {
+      "waitingend": {
+        "title": "Your session is still running",
+        "message": "Your current session is still running. If you close this page, all pending applications in this session will be terminated."
+      }
+    },
+    "main": {
+      "sidebar": {
+        "title": "My Genero applications",
+        "multitab_title": "My Application's windows"
+      }
+    }
+  }
+}

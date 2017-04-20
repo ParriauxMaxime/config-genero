@@ -1,0 +1,25 @@
+.gbc_CheckBoxWidget, .gbc_ThreeStateCheckBoxWidget {
+  border: 1px dotted transparent;
+  padding: 2px;
+  display: inline-flex;
+  flex-direction: column;
+  &.gbc_Focus {
+    border-color: $gbc-separator-color;
+  }
+}
+[__CheckBoxWidget], [__ThreeStateCheckBoxWidget] {
+  &.content{
+    flex: 1 1 auto;
+    display: inline-flex;
+    align-items: center;
+  }
+  &.label{
+    margin: 0 $gbc-margin-ratio*8px;
+    flex: 1 1 auto;
+    cursor: default;
+    white-space:nowrap;
+  }
+  &.label.notext {
+    display: none;
+  }
+}

@@ -1,0 +1,37 @@
+$gbc-ProgressBar-color: $gbc-primary-color;
+
+.gbc_ProgressBarWidget {
+  > div {
+    position: relative;
+    > div {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background: $gbc-ProgressBar-color;
+      width: 0;
+      transition: width 0.4s;
+    }
+  }
+
+  /* Arabic */
+  &.reverse{
+    > div > div {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &.mt-progress {
+    //padding: 0;
+    /*margin-top: 6px;
+    margin-bottom: 6px;*/
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .mt-progress-bar{
+      margin:0;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.gbc_FileInputWidget {
+  transition: opacity 0.5s, background-color 0.5s;
+  min-width: 400px;
+  min-height: 200px;
+  border: dashed 3px $gbc-disabled-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.3em;
+  cursor: pointer;
+  &.dropping {
+    opacity: 0.5;
+    background-color: $gbc-disabled-color;
+  }
+}
+form[__FileInputWidget]{position:absolute;}
+input[__FileInputWidget][type='file'] {
+    visibility: hidden;
+}

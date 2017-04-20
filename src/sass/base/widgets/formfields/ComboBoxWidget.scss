@@ -1,0 +1,86 @@
+$gbc-combobox-padding: 2px;
+.gbc_ComboBoxWidget {
+  display: flex;
+  background: $gbc-field-background-color;
+  padding-right: $gbc-combobox-padding;
+  cursor:pointer;
+
+  > [__ValueLabelWidget] {
+    flex: 1 1 auto;
+    padding: $gbc-combobox-padding 0;
+    overflow: hidden;
+    .gbc_dataContentMeasure{
+      padding-right: $gbc-combobox-padding + 1px;
+    }
+  }
+}
+[__ComboBoxWidget].zmdi-menu-down{
+    line-height: 1em;
+    padding-top: $gbc-combobox-padding;
+    padding-bottom: $gbc-combobox-padding;
+    align-content: flex-start;
+    flex: 0 0 auto;
+    text-align: right;
+    color: $gbc-primary-text-color;
+
+    .disabled &{
+      cursor: default;
+    }
+  }
+
+  .gbc_LabelWidget, .gbc_ValueLabelWidget{
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+  }
+
+[__ComboBoxWidget] {
+  padding-right: $gbc-combobox-padding;
+  &:hover {
+    cursor: pointer;
+  }
+  .mt-field:hover {
+    cursor: pointer;
+  }
+
+  &.placeholder{
+    color: $gbc-disabled-color;
+  }
+  .gbc_EditWidget.mt-field {
+    border: none;
+    box-shadow: none;
+    min-height: initial;
+    width: 0;
+    padding: 1.2px 0;
+    flex:1 1 0px;
+    .g_measuring & {
+      width: auto;
+      flex:1 1 auto;
+    }
+  }
+
+  > [__EditWidget] {
+    .gbc_dataContentMeasure{
+      padding-right: $gbc-combobox-padding + 1px;
+    }
+  }
+}
+[__DropdownWidget] [__CheckboxWidget]{
+  cursor: pointer;
+}
+
+.g_measured .gbc_ComboCheckBoxWidget {
+  .g_measureable.gbc_ValueLabelWidget {
+    width: auto;
+    flex: 1 1 auto;
+  }
+  .gbc_EditWidget.mt-field input {
+    width: 0;
+    font-family: inherit;
+    flex:1 1 0px;
+  }
+
+  &.upshift input{
+    text-transform: uppercase;
+  }
+}

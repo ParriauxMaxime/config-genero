@@ -1,0 +1,16 @@
+//.gbc_EditWidget {
+//}
+[__EditWidget] {
+  cursor:default;
+}
+
+.g_measured [__EditWidget].g_measureable, .g_measured [__DummyEditWidget].g_measureable > input {
+  width:100%;
+}
+
+input[__EditWidget] {
+  font-family:inherit;
+  min-width:0;
+  box-shadow: none;
+  cursor:text;
+}

@@ -1,0 +1,54 @@
+.gbc_MonitorDebugNodeInfoWidget {
+
+  td {
+    padding: 2px;
+  }
+
+  > table {
+    width: 100%;
+    border-spacing: 1px;
+    thead {
+      background: $gbc-primary-medium-color;
+      color: $gbc-secondary-text-color;
+      text-align: center;
+      font-size: small;
+    }
+    td {
+      border-left: 1px solid $mt-grey-300;
+      border-bottom: 0;
+      &:first-child {
+        width: 6px;
+      }
+      &:nth-child(2) {
+        min-width: 150px;
+      }
+      padding-left: 4px;
+    }
+  }
+
+  tbody {
+    .category {
+      background: $gbc-primary-background-color;
+      color: $gbc-primary-text-color;
+      font-weight: bold;
+      font-size: small;
+
+      &:hover {
+        cursor: pointer;
+        background: $gbc-primary-light-color;
+      }
+    }
+    tr>td:not(.category):first-child {
+      visibility: hidden;
+    }
+  }
+
+  .property {
+    &:nth-child(odd) {
+      background: $gbc-primary-background-color;
+    }
+    &.changed {
+      font-weight: bold;
+    }
+  }
+}

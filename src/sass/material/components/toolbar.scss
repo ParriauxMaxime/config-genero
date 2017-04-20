@@ -1,0 +1,58 @@
+
+.mt-sidebar-toggle{
+  width:$mt-toolbar-height;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mt-toolbar{
+  background-color: $gbc-primary-medium-color;
+  color: $gbc-secondary-text-color;
+  fill: $gbc-secondary-text-color;
+  min-height:$mt-toolbar-height;
+  height:$mt-toolbar-height;
+  line-height: $mt-toolbar-height;
+  //transition: all 0.3s ease;
+  @include mt-shadow($gbc-margin-ratio*2);
+  @include flex-stretch(row);
+  @at-root header#{&} {
+    z-index: $z-index-Toolbar;
+  }
+  >*{
+    line-height: $mt-toolbar-height;
+  }
+  a, a:focus, a:visited {
+    color:$gbc-secondary-text-color;
+  }
+  a:hover {
+    color:$gbc-primary-light-color;
+  }
+  .mt-actions{
+    margin: 0;
+    >li{
+      display: inline-block;
+      min-width:$mt-toolbar-height;
+      margin-right: $gbc-margin-ratio * 6px;
+      text-align: center;
+      ul {
+        display: none;
+      }
+    }
+  }
+  .mt-item {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .mt-separator{
+    border-left: 1px solid $gbc-separator-color;
+  }
+}
+
+.mt-toolbar-title{
+  @include flexible_guest_stretch;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 8px;
+}

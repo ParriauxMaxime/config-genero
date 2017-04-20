@@ -1,0 +1,13 @@
+.g_VBoxLayoutEngine {
+  position: relative;
+  >.g_BoxElement {
+    left: 0;
+    position: absolute;
+  }
+  &.reverse{
+    >.g_BoxElement {
+      left: auto;
+      right:0;
+    }
+  }
+}
